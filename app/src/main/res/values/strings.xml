@@ -5,4 +5,8 @@
     <string name="hint">Valor máximo (opcional)</string>
     <string name="inicie_o_sorteio">Inicie o sorteio</string>
     <string name="sorteio_de_1_a_1000">Sorteio de 1 a 1000</string>
+    <string name="intervalo">Intervalo de 1 à %,d</string>
+    <string name="limite_atingido">Limite atingido</string>
+    <string name="toast_maximo_sorteio">Máximo de sorteios atingido, atualize o limite.</string>
+    <string name="sorteado">sorteado</string>
 </resources>

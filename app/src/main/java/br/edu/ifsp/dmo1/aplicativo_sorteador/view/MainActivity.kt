@@ -5,8 +5,8 @@ import android.os.Bundle
 import android.view.View
 import android.view.View.OnClickListener
 import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.constraintlayout.helper.widget.Carousel.Adapter
 import br.edu.ifsp.dmo1.aplicativo_sorteador.R
 import br.edu.ifsp.dmo1.aplicativo_sorteador.databinding.ActivityMainBinding
 import br.edu.ifsp.dmo1.aplicativo_sorteador.model.Draw
@@ -39,24 +39,25 @@ class MainActivity : AppCompatActivity(), OnClickListener {
                 updateUI()
             }
             binding.buttonDraw -> {
-                binding.textviewExit.text = draw.getNumber().toString()
+                val number = draw.getNumber()
+                updateDrawNumberDisplay(number)
                 updateListView()
             }
         }
     }
 
     private fun updateListView() {
-        val adapter: ArrayAdapter<Int> = ArrayAdapter(
+        val adapter: ArrayAdapter<String> = ArrayAdapter(
             this,
             android.R.layout.simple_list_item_1,
-            draw.getHistory()
+            draw.getHistory(this)
         )
         binding.listviewDraw.adapter = adapter
     }
 
     @SuppressLint("DefaultLocale")
     private fun updateUI() {
-        val str = String.format("Intervalo de 1 à %,d", draw.getHighBorder())
+        val str = getString(R.string.intervalo, draw.getHighBorder())
         binding.textviewInterval.text = str
         binding.editLimit.text.clear()
         binding.textviewExit.text = getString(R.string.inicie_o_sorteio)
@@ -68,4 +69,12 @@ class MainActivity : AppCompatActivity(), OnClickListener {
         binding.buttonUseLimit.setOnClickListener(this)
     }
 
+    private fun updateDrawNumberDisplay(number: Int) {
+        if(number >= 0) {
+            binding.textviewExit.text = number.toString()
+        } else {
+            binding.textviewExit.text = getString(R.string.limite_atingido)
+            Toast.makeText(this, R.string.toast_maximo_sorteio, Toast.LENGTH_SHORT).show()
+        }
+    }
 }

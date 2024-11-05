@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Aplicación de Sorteo</string>
+    <string name="sortear">Sorteo</string>
+    <string name="utilizar_limite">Utilizar límite</string>
+    <string name="hint">Valor máximo (opcional)</string>
+    <string name="inicie_o_sorteio">Iniciar el sorteo</string>
+    <string name="sorteio_de_1_a_1000">Sorteo de 1 a 1000</string>
+    <string name="intervalo">Intervalo de 1 a %,d</string>
+    <string name="limite_atingido">Límite alcanzado</string>
+    <string name="toast_maximo_sorteio">Límite de sorteos alcanzado, actualiza el límite.</string>
+    <string name="sorteado">sorteado</string>
+</resources>

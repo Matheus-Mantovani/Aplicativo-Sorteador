@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Raffle App</string>
+    <string name="sortear">Draw</string>
+    <string name="utilizar_limite">Use limit</string>
+    <string name="hint">Maximum value (optional)</string>
+    <string name="inicie_o_sorteio">Start the draw</string>
+    <string name="sorteio_de_1_a_1000">Draw from 1 to 1000</string>
+    <string name="intervalo">Interval from 1 to %,d</string>
+    <string name="limite_atingido">Limit reached</string>
+    <string name="toast_maximo_sorteio">Maximum draws reached, update the limit.</string>
+    <string name="sorteado">drawn</string>
+</resources>
